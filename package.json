@@ -1,0 +1,31 @@
+{
+  "name": "vietbowl-backend",
+  "version": "1.0.0",
+  "description": "server side for vietbowl restaurant",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thaisonbk57/Vietbowl-Restaurant-Backend.git"
+  },
+  "keywords": [
+    "restaurant",
+    "node",
+    "server",
+    "express",
+    "vietbowl"
+  ],
+  "author": "Thai Son Dang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thaisonbk57/Vietbowl-Restaurant-Backend/issues"
+  },
+  "homepage": "https://github.com/thaisonbk57/Vietbowl-Restaurant-Backend#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "nodemailer": "^4.7.0"
+  }
+}
