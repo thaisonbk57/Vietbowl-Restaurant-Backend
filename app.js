@@ -54,13 +54,13 @@ app.post("/new-reservation", (req, res) => {
     to: process.env.TO_EMAIL,
     subject: name,
     html: `
-        <p><b>NAME: ${name}</b></p>  
-        <p><b>DATE: ${date}</b></p>
-        <p><b>TIME: ${time}</b></p>
-        <p><b>SEATS: ${seat}</b></p>
-        <p><b>PHONE: ${phone}</b></p>
-        <p><b>EMAIL: ${email}</b></p>
-        <p><b>NOTE: ${note || "empty"}</b></p>
+        <p><b>Name: ${name}</b></p>  
+        <p><b>Date: ${date}</b></p>
+        <p><b>Time: ${time}</b></p>
+        <p><b>Seats: ${seat}</b></p>
+        <p><b>Phone: ${phone}</b></p>
+        <p><b>Email: ${email}</b></p>
+        <p><b>Note: ${note || "empty"}</b></p>
         `
   };
 
