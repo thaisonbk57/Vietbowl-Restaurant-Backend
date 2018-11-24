@@ -18,7 +18,7 @@ const transporter = nodemailer.createTransport({
     pass: process.env.PASS
   },
   tls: {
-    rejectUnauthorized: false
+    rejectUnauthorized: true
   }
 });
 
@@ -47,7 +47,7 @@ app.route("/").get((req, res) => {
 });
 
 app.post("/new-reservation", (req, res) => {
-  const { name, email, seat, time, date, note } = req.body;
+  const { name, email, seat, time, date, note, phone } = req.body;
 
   const option = {
     from: `RESERVATION ${name} <${email}`,
@@ -55,10 +55,11 @@ app.post("/new-reservation", (req, res) => {
     subject: name,
     html: `
         <p><b>NAME: ${name}</b></p>  
-        <p><b>EMAIL: ${email}</b></p>
-        <p><b>TIME: ${time}</b></p>
         <p><b>DATE: ${date}</b></p>
+        <p><b>TIME: ${time}</b></p>
         <p><b>SEATS: ${seat}</b></p>
+        <p><b>PHONE: ${phone}</b></p>
+        <p><b>EMAIL: ${email}</b></p>
         <p><b>NOTE: ${note || "empty"}</b></p>
         `
   };
